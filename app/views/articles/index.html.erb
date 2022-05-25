@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button><%=link_to "Add a new article", new_article_path%></button>
+  </nav>
+</nav>
+
+<body>
+  <ul>
+    <% @articles.each do |article| %>
+      <article>
+        <a><%= link_to article.title, article_path(article)%></a>
+      </article>
+    <% end %>
+  </ul>
+
+</body>
